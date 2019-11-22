@@ -1,6 +1,6 @@
 # Chrome extension upload
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action uploads the specified ziped chrome extension to the provided app id.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ The target zipped file name.
 ## Example usage
 
 ```
-uses: actions/chrome-extension-upload@v1
+uses: Klemensas/chrome-extension-upload-action@v1
 with:
   app-id: 'xzc12xzc21cx23'
   token: 'yaa4521ajhh4kjsd556'
