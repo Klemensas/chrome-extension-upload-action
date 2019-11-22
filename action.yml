@@ -1,0 +1,19 @@
+name: Extension upload
+description: Action for uploading chrome extensions
+inputs:
+  app-id:
+    description: Request target
+    required: true
+  token:
+    description: Google auth token
+    required: true
+  file-name:
+    description: Name of zipped target upload file
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.file-name }}
+    - ${{ inputs.app-id }}
