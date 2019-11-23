@@ -4,11 +4,17 @@ branding:
   icon: upload-cloud
   color: green
 inputs:
-  app-id:
-    description: Request target
+  refresh-token:
+    description: Auth refresh token
     required: true
-  token:
-    description: Google auth token
+  app-id:
+    description: Extension application target id
+    required: true
+  client-id:
+    description: Token client id
+    required: true
+  client-secret:
+    description: Token client secret
     required: true
   file-name:
     description: Name of zipped target upload file
@@ -17,6 +23,8 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.token }}
+    - ${{ inputs.refresh-token }}
+    - ${{ inputs.client-id }}
+    - ${{ inputs.client-secret }}
     - ${{ inputs.file-name }}
     - ${{ inputs.app-id }}

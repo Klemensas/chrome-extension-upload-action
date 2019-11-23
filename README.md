@@ -4,13 +4,21 @@ This action uploads the specified ziped chrome extension to the provided app id.
 
 ## Inputs
 
+### `client-id`
+
+Your tokens client id
+
+### `client-secret`
+
+Your tokens client secret
+
+### `refresh-token`
+
+Google developer refresh token
+
 ### `app-id`
 
-The extension token.
-
-### `token`
-
-Google developer token
+The target extension id.
 
 ### `file-name`
 

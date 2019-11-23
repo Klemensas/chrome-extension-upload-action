@@ -1,4 +1,4 @@
-FROM byrnedo/alpine-curl:0.1.8
+FROM gempesaw/curl-jq:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
