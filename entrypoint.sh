@@ -29,7 +29,8 @@ status=`curl \
 | \
 jq -r '.uploadState'`
 
-if $status == 'FAILURE' then
+if [ $status == 'FAILURE' ]
+then
   exit 1
 fi
 
