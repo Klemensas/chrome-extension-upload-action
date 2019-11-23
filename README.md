@@ -1,6 +1,7 @@
 # Chrome extension upload
 
 This action uploads the specified ziped chrome extension to the provided app id.
+It uses the specified refresh token to generate an access token for uploading.
 
 ## Inputs
 
@@ -29,9 +30,11 @@ The target zipped file name.
 ## Example usage
 
 ```
-uses: Klemensas/chrome-extension-upload-action@v1
+uses: Klemensas/chrome-extension-upload-action@$VERSION
 with:
-  app-id: 'xzc12xzc21cx23'
-  token: 'yaa4521ajhh4kjsd556'
+  refresh-token: 'xxxxxxxxxxxxxxxxxxxxxx'
+  client-id: 'xxxxxxxxxxxxx'
+  client-secret: 'xxxxxxxxxxxx'
   file-name: './extension.zip'
+  app-id: 'xzc12xzc21cx23'
 ```

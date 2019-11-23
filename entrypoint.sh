@@ -17,7 +17,7 @@ token=`curl \
 | \
 jq -r '.access_token'`
 
-curl \
+status=`curl \
 --silent \
 --show-error \
 --fail \
@@ -25,4 +25,12 @@ curl \
 -H "x-goog-api-version: 2" \
 -X PUT \
 -T $4 \
--v https://www.googleapis.com/upload/chromewebstore/v1.1/items/$5
+-v https://www.googleapis.com/upload/chromewebstore/v1.1/items/$5 \
+| \
+jq -r '.uploadState'`
+
+if $status == 'FAILURE' then
+  exit 1
+fi
+
+exit 0
