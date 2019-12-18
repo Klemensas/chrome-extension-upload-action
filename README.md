@@ -25,16 +25,21 @@ The target extension id.
 
 The target zipped file name.
 
+### `publish`
+
+Publish or not after upload (true / false)
+
 ## Outputs
 
 ## Example usage
 
 ```
-uses: Klemensas/chrome-extension-upload-action@$VERSION
+uses: Passiverecords/chrome-extension-upload-action@$VERSION
 with:
   refresh-token: 'xxxxxxxxxxxxxxxxxxxxxx'
   client-id: 'xxxxxxxxxxxxx'
   client-secret: 'xxxxxxxxxxxx'
   file-name: './extension.zip'
   app-id: 'xzc12xzc21cx23'
+  publish: true
 ```
