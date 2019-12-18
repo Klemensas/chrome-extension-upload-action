@@ -34,7 +34,7 @@ Publish or not after upload (true / false)
 ## Example usage
 
 ```
-uses: Passiverecords/chrome-extension-upload-action@$VERSION
+uses: Klemensas/chrome-extension-upload-action@$VERSION
 with:
   refresh-token: 'xxxxxxxxxxxxxxxxxxxxxx'
   client-id: 'xxxxxxxxxxxxx'
