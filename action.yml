@@ -1,4 +1,4 @@
-name: Extension upload
+name: Chrome Extension upload & publish
 description: Action for uploading chrome extensions
 branding:
   icon: upload-cloud
@@ -19,6 +19,9 @@ inputs:
   file-name:
     description: Name of zipped target upload file
     required: true
+  publish:
+    description: True Or False to publish after upload
+    required: true
 runs:
   using: docker
   image: Dockerfile
@@ -28,3 +31,4 @@ runs:
     - ${{ inputs.client-secret }}
     - ${{ inputs.file-name }}
     - ${{ inputs.app-id }}
+    - ${{ inputs.publish }}

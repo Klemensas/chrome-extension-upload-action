@@ -25,6 +25,10 @@ The target extension id.
 
 The target zipped file name.
 
+### `publish`
+
+Publish or not after upload (true / false)
+
 ## Outputs
 
 ## Example usage
@@ -37,4 +41,5 @@ with:
   client-secret: 'xxxxxxxxxxxx'
   file-name: './extension.zip'
   app-id: 'xzc12xzc21cx23'
+  publish: true
 ```
